@@ -131,7 +131,7 @@ class Argument(object):
                 if callable(value):
                     value = value()
                 if value is not None:
-                    values.update(CIMultiDict([(k,a) for k,v in value.items() for a in v]))
+                    values.update(CIMultiDict(value.items()))
             return values
 
         return CIMultiDict()
